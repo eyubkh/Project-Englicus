@@ -1,0 +1,44 @@
+/**
+ * Do not edit directly
+ * Generated on Sun, 13 Mar 2022 17:11:36 GMT
+ */
+
+:root {
+  --color-brand-primary: #faee7d;
+  --color-brand-secondary: #7f8bfa;
+  --color-action-success: #86fa7d;
+  --color-action-error: #fa827d;
+  --color-neutral-light-1: #ffffff;
+  --color-neutral-light-2: #f8f8f8;
+  --color-neutral-light-3: #f0f0f0;
+  --color-neutral-grey-1: #838383;
+  --color-neutral-grey-2: #6d6d6d;
+  --color-neutral-grey-3: #575757;
+  --color-neutral-dark-3: #2c2c2c;
+  --color-neutral-dark-2: #161616;
+  --color-neutral-dark-1: #000000;
+  --token-font-family: Zilla Slab;
+  --token-line-height-xs: 110%;
+  --token-line-height-s: 120%;
+  --token-line-height-m: 130%;
+  --token-line-height-l: 150%;
+  --token-line-height-xl: 160%;
+  --token-line-height-xxl: 180%;
+  --token-font-weight-semi-bold: SemiBold;
+  --token-font-weight-regular: Regular;
+  --token-font-weight-bold: Bold;
+  --token-font-size-xs: 12;
+  --token-font-size-s: 17;
+  --token-font-size-m: 28;
+  --token-font-size-l: 44;
+  --token-font-size-xl: 72;
+  --token-font-size-xxl: 116;
+  --token-letter-spacing-xs: -2%;
+  --token-letter-spacing-s: -1%;
+  --token-letter-spacing-m: 0%;
+  --token-letter-spacing-l: 5%;
+  --token-spacing-m: 16;
+  --token-spacing-l: 32;
+  --token-spacing-xl: 56;
+  --token-spacing-xxl: 96;
+}

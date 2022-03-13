@@ -28,7 +28,9 @@ const config = (env, argv) => {
     resolve: {
       extensions: ['*', '.js', '.jsx'],
       alias: {
-        apiAlias: path.resolve(__dirname, './Web/src/')
+        apiAlias: path.resolve(__dirname, './Web/src/'),
+        '@tokens': path.resolve(__dirname, './Tokens/build/js/_variables'),
+        '@components': path.resolve(__dirname, './Web/src/Component/')
       }
     },
     plugins: [new HtmlWebpackPlugin({ template: 'Web/src/index.html' })],

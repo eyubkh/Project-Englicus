@@ -1,21 +1,21 @@
-import { SimpleButton } from '../../../Web/src/Component/Atoms/Buttons/SimpleButton'
+import { Button } from '@components/Atoms/Buttons/Button'
 import { withDesign } from 'storybook-addon-designs'
 
 export default {
-  title: 'UI Web/Atoms/Buttons/SimpleButton',
-  component: SimpleButton,
-  decorators: [withDesign],
+  title: 'UI Web/Atoms/Buttons/Button',
+  component: Button,
+  decorators: [withDesign]
 }
 
-export const Button = (args) => <SimpleButton {...args}></SimpleButton>
+export const ButtonComponent = (args) => <Button {...args}></Button>
 
-Button.args = {
+ButtonComponent.args = {
   text: 'hola'
 }
 
-Button.parameters = {
+ButtonComponent.parameters = {
   design: {
     type: 'figma',
-    url: 'https://www.figma.com/file/67LuQ7nQzcKvGbqG5BRMTC/Design-System-Englicus?node-id=110%3A89',
-  },
+    url: 'https://www.figma.com/file/67LuQ7nQzcKvGbqG5BRMTC/Design-System-Englicus?node-id=110%3A89'
+  }
 }

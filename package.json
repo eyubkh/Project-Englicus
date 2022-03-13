@@ -12,7 +12,8 @@
     "test": "jest",
     "test:watch": "npm run test -- --watch",
     "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook"
+    "build-storybook": "build-storybook",
+    "tokens:build": "style-dictionary build"
   },
   "repository": {
     "type": "git",
@@ -46,12 +47,15 @@
     "babel-loader": "^8.2.3",
     "eslint": "^7.32.0",
     "eslint-config-standard": "^16.0.3",
+    "eslint-import-resolver-alias": "^1.1.2",
     "eslint-plugin-import": "^2.25.4",
     "eslint-plugin-node": "^11.1.0",
     "eslint-plugin-promise": "^5.2.0",
     "eslint-plugin-react": "^7.29.2",
+    "eslint-plugin-storybook": "^0.5.7",
     "jest": "^27.5.1",
     "storybook-addon-designs": "^6.2.1",
+    "style-dictionary": "^3.7.0",
     "webpack-dev-server": "^4.7.4"
   }
 }
