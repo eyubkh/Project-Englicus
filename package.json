@@ -1,0 +1,57 @@
+{
+  "name": "anglicus",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "webpack serve --mode=development",
+    "prod": "webpack serve --mode=production",
+    "build": "webpack --mode=production",
+    "lint:init": "eslint --init",
+    "lint:fix": "eslint --fix --ext .js,.jsx .",
+    "test": "jest",
+    "test:watch": "npm run test -- --watch",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/eyubkh/Project-anglicus.git"
+  },
+  "author": "Ayoub kh",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/eyubkh/Project-anglicus/issues"
+  },
+  "homepage": "https://github.com/eyubkh/Project-anglicus#readme",
+  "dependencies": {
+    "css-loader": "^6.6.0",
+    "html-webpack-plugin": "^5.5.0",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "style-loader": "^3.3.1",
+    "webpack": "^5.69.1",
+    "webpack-cli": "^4.9.2"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.17.5",
+    "@babel/preset-react": "^7.16.7",
+    "@storybook/addon-actions": "^6.5.0-alpha.47",
+    "@storybook/addon-essentials": "^6.5.0-alpha.47",
+    "@storybook/addon-interactions": "^6.5.0-alpha.47",
+    "@storybook/addon-links": "^6.5.0-alpha.47",
+    "@storybook/builder-webpack5": "^6.4.19",
+    "@storybook/manager-webpack5": "^6.4.19",
+    "@storybook/react": "^6.5.0-alpha.47",
+    "babel-loader": "^8.2.3",
+    "eslint": "^7.32.0",
+    "eslint-config-standard": "^16.0.3",
+    "eslint-plugin-import": "^2.25.4",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^5.2.0",
+    "eslint-plugin-react": "^7.29.2",
+    "jest": "^27.5.1",
+    "storybook-addon-designs": "^6.2.1",
+    "webpack-dev-server": "^4.7.4"
+  }
+}
