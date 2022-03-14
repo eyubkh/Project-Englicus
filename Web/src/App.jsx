@@ -1,7 +1,7 @@
-import { ColorBrandPrimary } from '@tokens'
+import { Button } from '../src/Component/Atoms/Buttons/Button'
 
 const App = () => {
-  return <h1 style={{ color: ColorBrandPrimary }}>Hello!</h1>
+  return <Button text='hola'></Button>
 }
 
 export default App
