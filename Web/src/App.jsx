@@ -1,7 +1,7 @@
-import { Button } from '../src/Component/Atoms/Buttons/Button'
+import { Logo } from '../src/Component/Atoms/Logo/Logo'
 
 const App = () => {
-  return <Button text='hola'></Button>
+  return <Logo />
 }
 
 export default App
