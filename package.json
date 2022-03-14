@@ -26,6 +26,7 @@
   },
   "homepage": "https://github.com/eyubkh/Project-anglicus#readme",
   "dependencies": {
+    "@fontsource/zilla-slab": "^4.5.3",
     "css-loader": "^6.6.0",
     "html-webpack-plugin": "^5.5.0",
     "react": "^17.0.2",
@@ -56,6 +57,10 @@
     "jest": "^27.5.1",
     "storybook-addon-designs": "^6.2.1",
     "style-dictionary": "^3.7.0",
+    "styled-components": "^5.3.3",
     "webpack-dev-server": "^4.7.4"
+  },
+  "resolutions": {
+    "styled-components": "^5"
   }
 }

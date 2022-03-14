@@ -11,6 +11,7 @@ module.exports = {
     config.resolve.alias = {
       ...config.resolve.alias,
       '@components': path.resolve(__dirname, "../Web/src/Component/"),
+      '@tokens': path.resolve(__dirname, '../Tokens/build/js/_variables.js')
     };
 
     return config;
