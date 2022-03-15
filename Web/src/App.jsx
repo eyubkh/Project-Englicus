@@ -1,7 +1,7 @@
-import { Logo } from '../src/Component/Atoms/Logo/Logo'
+import { Lang } from '../src/Component/Atoms/Icons/Lang'
 
 const App = () => {
-  return <Logo />
+  return <Lang />
 }
 
 export default App
