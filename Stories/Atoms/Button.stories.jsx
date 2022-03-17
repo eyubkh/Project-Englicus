@@ -3,7 +3,6 @@ import { withDesign } from 'storybook-addon-designs'
 
 export default {
   title: 'UI Web/Atoms/Buttons',
-  component: Button,
   decorators: [withDesign]
 
 }

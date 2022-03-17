@@ -18,6 +18,7 @@ module.exports = {
   },
   settings: {
     'import/resolver': {
+      'babel-module': {},
       alias: {
         map: [
           ['@tokens', './Tokens/build/js/_variables.js'],
