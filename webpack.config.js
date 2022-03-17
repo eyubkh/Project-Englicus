@@ -24,15 +24,12 @@ const config = (env, argv) => {
           use: ['style-loader', 'css-loader']
         }
         // {
-        //   test: /\.(png|jp(e*)g|svg|gif)$/,
-        //   use: [
-        //     {
-        //       loader: 'file-loader',
-        //       options: {
-        //         name: 'assets/[hash]-[name].[ext]'
-        //       }
-        //     }
-        //   ]
+        //   test: /\.(png|jpe?g|gif|glb|gltf|bin)$/i,
+        //   loader: 'file-loader',
+        //   options: {
+        //     publicPath: './',
+        //     name: '[name].[ext]'
+        //   }
         // }
       ]
     },
@@ -42,11 +39,12 @@ const config = (env, argv) => {
         apiAlias: path.resolve(__dirname, './Web/src/'),
         '@tokens': path.resolve(__dirname, './Tokens/build/js/_variables'),
         '@components': path.resolve(__dirname, './Web/src/Component/')
+        // '@assets': path.resolve(__dirname, './Web/src/Assets/')
       }
     },
     plugins: [new HtmlWebpackPlugin({ template: 'Web/src/index.html' })],
     devServer: {
-      compress: true, // Gzip for compres the site
+      compress: false, // Gzip for compres the site
       port: 3000,
       open: true, // Open browser
       client: {

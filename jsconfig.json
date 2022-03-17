@@ -3,7 +3,7 @@
     "baseUrl": "./",
     "paths": {
       "@tokens": ["Tokens/build/js/_variables.js"],
-      "@components/*": ["Web/src/component/*"]
+      "@components": ["Web/src/Component/*"]
     }
   },
   "exclude": ["node_modules"]

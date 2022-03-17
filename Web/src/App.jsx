@@ -1,7 +1,7 @@
-import { Lang } from '../src/Component/Atoms/Icons/Lang'
+import { World } from './Three/World'
 
 const App = () => {
-  return <Lang />
+  return <World />
 }
 
 export default App

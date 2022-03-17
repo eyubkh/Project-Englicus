@@ -1,12 +1,3 @@
 {
-  "compact": false,
-  "presets": ["@babel/preset-env", ["@babel/preset-react", { "runtime": "automatic"}]],
-  "plugins": [
-    ["module-resolver", {
-      "root": ["./"],
-      "alias": {
-        "@assets": "./Web/src/Assets"
-      }
-    }]
-  ]
+  "presets": ["@babel/preset-env", ["@babel/preset-react", { "runtime": "automatic"}]]
 }
