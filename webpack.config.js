@@ -22,15 +22,15 @@ const config = (env, argv) => {
         {
           test: /\.css$/,
           use: ['style-loader', 'css-loader']
+        },
+        {
+          test: /\.(png|jpe?g|gif|glb|gltf|bin)$/i,
+          loader: 'file-loader',
+          options: {
+            publicPath: './',
+            name: '[name].[ext]'
+          }
         }
-        // {
-        //   test: /\.(png|jpe?g|gif|glb|gltf|bin)$/i,
-        //   loader: 'file-loader',
-        //   options: {
-        //     publicPath: './',
-        //     name: '[name].[ext]'
-        //   }
-        // }
       ]
     },
     resolve: {
