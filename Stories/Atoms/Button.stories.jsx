@@ -3,6 +3,7 @@ import { withDesign } from 'storybook-addon-designs'
 
 export default {
   title: 'UI Web/Atoms/Buttons',
+  component: Button,
   decorators: [withDesign]
 
 }
@@ -10,7 +11,9 @@ export default {
 export const ButtonDefault = (args) => <Button {...args}></Button>
 
 ButtonDefault.args = {
-  text: 'Default'
+  text: 'Default',
+  sucess: false,
+  shadow: false
 }
 export const ButtonSucess = (args) => <Button {...args}></Button>
 

@@ -1,34 +1,63 @@
 import { Heading } from '@components/Atoms/Text/Heading'
-import '@web/style.css'
+import { DisplayText } from '@components/Atoms/Text/DispalyText'
+import { TextContainer } from '@components/Atoms/Text/TextContainer'
+import { TextStyle } from '@components/Atoms/Text/TextStyle'
 
 export default {
-  component: Heading,
-  title: 'UI Web/Atoms/Text'
+  title: 'UI Web/Atoms/Text',
+  argTypes: {
+    element: {
+      options: ['h1', 'h2', 'h3', 'h4', 'p'],
+      control: { type: 'radio' }
+    },
+    size: {
+      optinos: ['l']
+    }
+  }
 }
 
-const Template = (args) => <Heading {...args}></Heading>
+const HeaderTemplate = (args) => <Heading {...args}></Heading>
 
-export const Heading1 = Template.bind({})
+export const Header = HeaderTemplate.bind({})
 
-Heading1.args = {
-  children: 'Heading 1',
-  element: 'h1'
-}
-export const Heading2 = Template.bind({})
-
-Heading2.args = {
-  children: 'Heading 2',
+Header.args = {
+  children: 'Heading',
   element: 'h2'
 }
-export const Heading3 = Template.bind({})
 
-Heading3.args = {
-  children: 'Heading 3',
-  element: 'h3'
+/// Text dispaly
+
+const DisplayTextTemplate = (args) => <DisplayText {...args} />
+
+export const Display = DisplayTextTemplate.bind()
+
+Display.args = {
+  size: 'm',
+  children: 'Text contenent example'
 }
-export const Heading4 = Template.bind({})
 
-Heading4.args = {
-  children: 'Heading 4',
-  element: 'h4'
+/// Text Container
+
+export const Container = () => {
+  return (
+    <TextContainer>
+      <Header element='h3'>
+        Title Example
+      </Header>
+      <DisplayText size='m'>
+        Text contenent example
+      </DisplayText>
+    </TextContainer>
+  )
+}
+
+/// Style Text
+
+const TextStyleTemplate = (args) => <TextStyle {...args} />
+
+export const Style = TextStyleTemplate.bind()
+
+Style.args = {
+  children: 'example text',
+  variant: 'bold'
 }

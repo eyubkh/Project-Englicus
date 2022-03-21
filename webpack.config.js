@@ -22,11 +22,8 @@ const config = (env, argv) => {
         },
         {
           test: /\.css$/i,
-          use: [
-            {
-              loader: 'style-loader',
-              options: { injectType: 'singletonStyleTag' }
-            }, 'css-loader']
+          use: ['style-loader', 'css-loader'],
+          include: path.resolve(__dirname, './Web/src/')
         },
         {
           test: /\.(png|jpe?g|gif|glb|gltf|bin)$/i,

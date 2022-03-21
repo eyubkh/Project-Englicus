@@ -1,12 +1,17 @@
 import { InputUser } from '@components/Atoms/Inputs/InputUser'
 
 export default {
+  title: 'UI Web/Atoms/Inputs',
   component: InputUser,
-  title: 'UI Web/Atoms/Inputs'
+  argType: {
+    isDisabled: {
+      options: Boolean
+
+    }
+  }
 }
-const Input = (args) => <InputUser {...args} />
-export const InputDisabled = Input.bind({})
-InputDisabled.args = {
-  isDisabled: true
+const Template = (args) => <InputUser {...args} />
+export const Input = Template.bind({})
+Input.args = {
+  isDisabled: false
 }
-export const InputDefault = Input.bind({})
