@@ -1,7 +1,11 @@
-import { World } from './Three/World'
+import Home from '@components/Pages/Home'
 
 const App = () => {
-  return <World />
+  return (
+    <>
+    <Home />
+    </>
+  )
 }
 
 export default App

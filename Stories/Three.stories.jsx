@@ -1,4 +1,4 @@
-import { World } from '../../Web/src/Three/World'
+import { World } from '../Web/src/Three/World'
 
 export default {
   title: 'UI Web/Three',

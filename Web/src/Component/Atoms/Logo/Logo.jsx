@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { ColorBrandPrimary, TokenFontSizeL, TokenFontWeightSemiBold, TokenLineHeightM } from '@tokens'
+import { ColorBrandPrimary, TokenFontSizeL, TokenFontWeightSemiBold, TokenLineHeightM } from '@tokens/js/_variables'
 
 const LogoComponent = styled.p`
   text-transform: uppercase;

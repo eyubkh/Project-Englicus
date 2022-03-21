@@ -1,3 +1,5 @@
+@import '@tokens/css/_variables';
+
 body,
 *
 {
@@ -6,3 +8,7 @@ body,
   padding: 0;
   margin: 0;
 } 
+
+h1 {
+  font-size:  var(--token-font-size-xxl);
+}

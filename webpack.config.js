@@ -15,31 +15,32 @@ const config = (env, argv) => {
         {
           test: /\.js$|\.jsx$/,
           loader: 'babel-loader',
+          exclude: /node_modules/,
           options: {
             presets: [['@babel/preset-react', { runtime: 'automatic' }], '@babel/preset-env']
           }
         },
         {
           test: /\.css$/,
-          use: ['style-loader', 'css-loader']
+          use: ['style-loader', 'css-loader'],
+          include: path.resolve(__dirname, './Web/src')
         },
         {
           test: /\.(png|jpe?g|gif|glb|gltf|bin)$/i,
           loader: 'file-loader',
           options: {
-            publicPath: './',
             name: '[name].[ext]'
           }
         }
       ]
     },
     resolve: {
-      extensions: ['*', '.js', '.jsx'],
+      extensions: ['*', '.js', '.jsx', '.css'],
       alias: {
         apiAlias: path.resolve(__dirname, './Web/src/'),
-        '@tokens': path.resolve(__dirname, './Tokens/build/js/_variables'),
-        '@components': path.resolve(__dirname, './Web/src/Component/')
-        // '@assets': path.resolve(__dirname, './Web/src/Assets/')
+        '@tokens': path.resolve(__dirname, './Tokens/build/'),
+        '@components': path.resolve(__dirname, './Web/src/Component/'),
+        '@web': path.resolve(__dirname, './Web/src/')
       }
     },
     plugins: [new HtmlWebpackPlugin({ template: 'Web/src/index.html' })],

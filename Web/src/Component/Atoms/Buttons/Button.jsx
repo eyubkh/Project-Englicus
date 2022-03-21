@@ -12,7 +12,7 @@ import {
   ColorNeutralDark100,
   ColorActionSuccess200,
   ColorActionError200
-} from '@tokens'
+} from '@tokens/js/_variables'
 
 const ButtonComponent = styled.button`
   border-radius: ${TokenBorderRadiusButton}px;

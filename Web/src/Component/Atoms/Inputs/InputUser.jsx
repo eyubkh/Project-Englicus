@@ -1,4 +1,4 @@
-import { ColorBrandSecondary, TokenFontWeightBold } from '@tokens'
+import { ColorBrandSecondary, TokenFontWeightBold } from '@tokens/js/_variables'
 import styled from 'styled-components'
 
 const InputUserComponent = styled.input`

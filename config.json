@@ -8,6 +8,16 @@
         "destination": "_variables.js",
         "format": "javascript/es6"
       }]
+    },
+    "css": {
+      "transformGroup": "css",
+      "buildPath": "Tokens/build/css/",
+      "files": [
+        {
+          "format": "css/variables",
+          "destination": "_variables.css"
+        }
+      ]
     }
   }
 }
