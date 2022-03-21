@@ -1,7 +1,11 @@
-import { Button } from '../src/Component/Atoms/Buttons/Button'
+import Home from '@components/Pages/Home'
 
 const App = () => {
-  return <Button text='hola'></Button>
+  return (
+    <>
+    <Home />
+    </>
+  )
 }
 
 export default App

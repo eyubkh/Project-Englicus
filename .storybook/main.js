@@ -1,19 +1,10 @@
-const path = require('path')
+const custom = require('../webpack.config.js');
 
 module.exports = {
   "stories": ["../Stories/**/*.stories.mdx", "../Stories/**/*.stories.@(js|jsx|ts|tsx)"],
-  "addons": ["storybook-addon-designs/register","@storybook/addon-links", "@storybook/addon-essentials", "@storybook/addon-interactions"],
+  "addons": ["@storybook/addon-postcss","storybook-addon-designs/register","@storybook/addon-links", "@storybook/addon-essentials", "@storybook/addon-interactions"],
   "framework": "@storybook/react",
-  core: {
-    builder: "webpack5"
-  },
   webpackFinal: async (config) => {
-    config.resolve.alias = {
-      ...config.resolve.alias,
-      '@components': path.resolve(__dirname, "../Web/src/Component/"),
-      '@tokens': path.resolve(__dirname, '../Tokens/build/js/_variables.js')
-    };
-
-    return config;
-  }
-}
+    return { ...config, module: { ...config.module, rules: custom().module.rules }, resolve: { ...custom().resolve } };
+  },
+};

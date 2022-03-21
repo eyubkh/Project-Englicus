@@ -2,8 +2,9 @@
   "compilerOptions": {
     "baseUrl": "./",
     "paths": {
-      "@tokens": ["Tokens/build/js/_variables.js"],
-      "@components/*": ["Web/src/component/*"]
+      "@web": ["Web/src/*"],
+      "@tokens": ["Tokens/build/*"],
+      "@components": ["Web/src/Component/*"]
     }
   },
   "exclude": ["node_modules"]
