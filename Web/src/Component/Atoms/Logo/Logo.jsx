@@ -4,7 +4,7 @@ import { ColorBrandPrimary, TokenFontSizeL, TokenFontWeightSemiBold, TokenLineHe
 const LogoComponent = styled.p`
   text-transform: uppercase;
   font-weight: ${TokenFontWeightSemiBold};
-  font-size: ${TokenFontSizeL}px;
+  font-size: ${TokenFontSizeL};
   line-height: ${TokenLineHeightM};
 
   span {

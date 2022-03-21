@@ -1,6 +1,6 @@
 /**
  * Do not edit directly
- * Generated on Mon, 21 Mar 2022 12:44:37 GMT
+ * Generated on Mon, 21 Mar 2022 13:18:35 GMT
  */
 
 export const ColorBrandPrimary = "#faee7d";
@@ -30,12 +30,12 @@ export const TokenLineHeightXxl = "180%";
 export const TokenFontWeightSemiBold = "SemiBold";
 export const TokenFontWeightRegular = "Regular";
 export const TokenFontWeightBold = "Bold";
-export const TokenFontSizeXs = "12";
-export const TokenFontSizeS = "17";
-export const TokenFontSizeM = "28";
-export const TokenFontSizeL = "44";
-export const TokenFontSizeXl = "72";
-export const TokenFontSizeXxl = "116";
+export const TokenFontSizeXs = "0.75rem";
+export const TokenFontSizeS = "1.063rem";
+export const TokenFontSizeM = "1.75rem";
+export const TokenFontSizeL = "2.75rem";
+export const TokenFontSizeXl = "4.5rem";
+export const TokenFontSizeXxl = "7.25rem";
 export const TokenLetterSpacingXs = "-2%";
 export const TokenLetterSpacingS = "-1%";
 export const TokenLetterSpacingM = "0%";

@@ -19,7 +19,7 @@ const ButtonComponent = styled.button`
   border: ${props => props.transparent ? `solid 3px ${ColorBrandSecondary}` : 'none'};
   padding: ${TokenSpacingM}px ${TokenSpacingXl}px;
   font-weight: ${TokenFontWeightRegular};
-  font-size: ${TokenFontSizeS}px;
+  font-size: ${TokenFontSizeS};
   text-transform: uppercase;
   background-color: ${props => props.sucess
     ? ColorActionSuccess200

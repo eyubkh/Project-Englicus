@@ -21,15 +21,19 @@ const config = (env, argv) => {
           }
         },
         {
-          test: /\.css$/,
-          use: ['style-loader', 'css-loader'],
-          include: path.resolve(__dirname, './Web/src')
+          test: /\.css$/i,
+          use: [
+            {
+              loader: 'style-loader',
+              options: { injectType: 'singletonStyleTag' }
+            }, 'css-loader']
         },
         {
           test: /\.(png|jpe?g|gif|glb|gltf|bin)$/i,
           loader: 'file-loader',
           options: {
-            name: '[name].[ext]'
+            name: '[name].[ext]',
+            outputPath: 'assets/'
           }
         }
       ]

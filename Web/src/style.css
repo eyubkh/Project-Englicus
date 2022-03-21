@@ -12,3 +12,12 @@ body,
 h1 {
   font-size:  var(--token-font-size-xxl);
 }
+h2 {
+  font-size:  var(--token-font-size-xl);
+}
+h3 {
+  font-size:  var(--token-font-size-l);
+}
+h4 {
+  font-size:  var(--token-font-size-m);
+}

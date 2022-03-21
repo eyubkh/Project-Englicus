@@ -1,4 +1,4 @@
-import { ColorActionError200, ColorActionSuccess200, ColorBrandSecondary, ColorNeutralGrey200 } from '@tokens'
+import { ColorActionError200, ColorActionSuccess200, ColorBrandSecondary, ColorNeutralGrey200 } from '@tokens/js/_variables'
 import { Icon } from '@components/Atoms/Icons/Icon'
 
 export default {

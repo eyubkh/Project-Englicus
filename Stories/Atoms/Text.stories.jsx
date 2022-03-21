@@ -1,4 +1,5 @@
 import { Heading } from '@components/Atoms/Text/Heading'
+import '@web/style.css'
 
 export default {
   component: Heading,
