@@ -1,7 +1,9 @@
+import { Section } from '@components/Organisms/Section'
+
 const Home = () => {
   return (
     <>
-    <h1>Englicus</h1>
+      <Section />
     </>
   )
 }

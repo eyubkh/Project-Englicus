@@ -1,7 +1,7 @@
 import { ColorBrandSecondary, TokenFontWeightBold } from '@tokens/js/_variables'
 import styled from 'styled-components'
 
-const InputUserComponent = styled.input`
+const Component = styled.input`
   font-size: 2.75rem;
   font-weight: ${TokenFontWeightBold};
   border: none;
@@ -18,7 +18,6 @@ const InputUserComponent = styled.input`
   }
 `
 
-export const InputUser = ({ isDisabled, ...rest }) => {
-  console.log(isDisabled, rest)
-  return <InputUserComponent disabled={isDisabled}></InputUserComponent>
+export const TextField = ({ isDisabled, ...rest }) => {
+  return <Component disabled={isDisabled}></Component>
 }

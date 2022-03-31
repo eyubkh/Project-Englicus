@@ -17,5 +17,11 @@ const Component = styled.span`
   font-weight: ${props => props.variant === 'bold' ? TokenFontWeightBold : 'none'};
 `
 export const TextStyle = ({ children, ...args }) => {
+  const rules = ['Success', 'Error', 'Bold', 'Default']
+  if (!rules.includes(args.variant)) {
+    console.warn(`Text Stlye variant given (: ${args.variant} :) there isn't into rules [${rules}]`)
+    args.variant = 'Default'
+  }
+  args.variant = args.variant.toLowerCase()
   return <Component {...args}>{children}</Component>
 }

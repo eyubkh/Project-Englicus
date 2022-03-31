@@ -1,17 +1,17 @@
-import { InputUser } from '@components/Atoms/Inputs/InputUser'
+import { TextField as Component } from '@components/Atoms/Inputs/TextField'
 
 export default {
-  title: 'UI Web/Atoms/Inputs',
-  component: InputUser,
-  argType: {
+  title: 'UI Web/Atoms',
+  component: Component,
+  argTypes: {
     isDisabled: {
-      options: Boolean
-
+      control: { type: 'boolean' }
     }
   }
 }
-const Template = (args) => <InputUser {...args} />
-export const Input = Template.bind({})
+
+export const Input = (args) => <Component {...args} />
+
 Input.args = {
   isDisabled: false
 }

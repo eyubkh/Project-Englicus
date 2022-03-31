@@ -1,12 +1,12 @@
 import styled from 'styled-components'
-import { ColorBrandPrimary, TokenFontSizeL, TokenFontWeightSemiBold, TokenLineHeightM } from '@tokens/js/_variables'
+import { ColorBrandPrimary, TokenFontSizeM, TokenFontWeightSemiBold, TokenLineHeightM } from '@tokens/js/_variables'
 
 const LogoComponent = styled.p`
   text-transform: uppercase;
   font-weight: ${TokenFontWeightSemiBold};
-  font-size: ${TokenFontSizeL};
+  font-size: ${TokenFontSizeM};
   line-height: ${TokenLineHeightM};
-
+  color:white;
   span {
     color: ${ColorBrandPrimary};
   }
