@@ -1,52 +1,27 @@
-import { Button } from '@components/Atoms/Buttons/Button'
+import { Button as Component } from '@components/Atoms/Buttons/Button'
 import { withDesign } from 'storybook-addon-designs'
 
 export default {
-  title: 'UI Web/Atoms/Buttons',
-  component: Button,
-  decorators: [withDesign]
+  title: 'UI Web/Atoms',
+  component: Component,
+  decorators: [withDesign],
+  argTypes: {
+    variant: {
+      options: ['Success', 'Error', 'Transparent', 'Default'],
+      control: { type: 'radio' }
+    }
+  }
 
 }
 
-export const ButtonDefault = (args) => <Button {...args}></Button>
+export const Button = (args) => <Component {...args}></Component>
 
-ButtonDefault.args = {
-  text: 'Default',
-  sucess: false,
-  shadow: false
-}
-export const ButtonSucess = (args) => <Button {...args}></Button>
-
-ButtonSucess.args = {
-  text: 'Continue',
-  sucess: true,
-  shadow: true
-}
-export const ButtonError = (args) => <Button {...args}></Button>
-
-ButtonError.args = {
-  text: 'Continue',
-  error: true,
-  shadow: true
+Button.args = {
+  children: 'Default',
+  variant: ''
 }
 
-export const ButtonTransparent = (args) => <Button {...args}></Button>
-
-ButtonTransparent.args = {
-  text: 'Skip',
-  transparent: true,
-  shadow: true
-}
-
-export const ButtonCheck = (args) => <Button {...args}></Button>
-
-ButtonCheck.args = {
-  text: 'Check',
-  sucess: true,
-  shadow: true
-}
-
-ButtonDefault.parameters = {
+Button.parameters = {
   design: {
     type: 'figma',
     url: 'https://www.figma.com/file/67LuQ7nQzcKvGbqG5BRMTC/Design-System-Englicus?node-id=110%3A89'

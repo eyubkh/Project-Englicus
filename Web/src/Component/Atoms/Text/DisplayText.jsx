@@ -2,6 +2,7 @@ import styled from 'styled-components'
 import { TokenFontSizeXxl, TokenFontSizeXl, TokenFontSizeL, TokenFontSizeM, TokenFontSizeS, TokenFontSizeXs } from '@tokens/js/_variables'
 
 const Component = styled.p`
+  color: white;
   font-size: ${props => {
     props.size.toLowerCase()
     switch (props.size) {
@@ -23,6 +24,12 @@ const Component = styled.p`
   }};
 `
 
-export const DisplayText = ({ children, element, size }) => {
-  return <Component as={element} size={size}>{children}</Component>
+export const DisplayText = ({ children, size }) => {
+  size = size.toLowerCase()
+  const rules = ['xxl', 'xl', 'l', 'm', 's', 'xs']
+  if (!rules.includes(size)) {
+    console.warn(`DisplayText size given (: ${size} :) there isn't into rules [${rules}]`)
+    size = 'm'
+  }
+  return <Component size={size}>{children}</Component>
 }

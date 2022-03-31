@@ -15,40 +15,58 @@ import {
 } from '@tokens/js/_variables'
 
 const ButtonComponent = styled.button`
-  border-radius: ${TokenBorderRadiusButton}px;
-  border: ${props => props.transparent ? `solid 3px ${ColorBrandSecondary}` : 'none'};
-  padding: ${TokenSpacingM}px ${TokenSpacingXl}px;
+  border-radius: ${TokenBorderRadiusButton};
+  border: ${props => {
+    props.variant = props.variant.toLowerCase()
+    return props.variant === 'transparent'
+      ? `solid 3px ${ColorBrandSecondary}`
+      : 'none'
+  }};
+  padding: ${TokenSpacingM} ${TokenSpacingXl};
   font-weight: ${TokenFontWeightRegular};
   font-size: ${TokenFontSizeS};
   text-transform: uppercase;
-  background-color: ${props => props.sucess
-    ? ColorActionSuccess200
-    : props.error
-    ? ColorActionError200
-    : props.transparent
-    ? 'transparent'
-    : ColorBrandSecondary
-  };
-  box-shadow: 0px 4px ${props => props.sucess && props.shadow
-    ? ColorActionSuccess300
-    : props.error && props.shadow
-    ? ColorActionError300
-    : 'none'
-  };
-  color: ${props => {
-      if (props.sucess || props.error) {
-        return ColorNeutralLight100
-      } else if (props.transparent) {
+  background-color: ${props => {
+    props.variant = props.variant.toLowerCase()
+    switch (props.variant) {
+      case 'success':
+        return ColorActionSuccess200
+      case 'error':
+        return ColorActionError200
+      case 'transparent':
+        return 'transparent'
+      default:
         return ColorBrandSecondary
       }
-      return ColorNeutralDark100
+  }};
+  box-shadow: 0px 4px ${props => {
+    props.variant = props.variant.toLowerCase()
+    switch (props.variant) {
+      case 'success':
+        return ColorActionSuccess300
+      case 'error':
+        return ColorActionError300
+      default:
+        return 'none'
     }
-  };
+  }};
+  color: ${props => {
+    props.variant.toLowerCase()
+    switch (props.variant) {
+      case 'success':
+      case 'error':
+        return ColorNeutralLight100
+      case 'transparent':
+        return ColorBrandSecondary
+      default:
+        return ColorNeutralDark100
+    }
+  }};
   cursor: pointer;
   :hover {
     filter: brightness(110%)
   }
 `
-export const Button = ({ text, ...args }) => {
-  return <ButtonComponent {...args}>{text}</ButtonComponent>
+export const Button = ({ children, ...args }) => {
+  return <ButtonComponent {...args}>{children}</ButtonComponent>
 }

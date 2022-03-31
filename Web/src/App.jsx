@@ -1,10 +1,11 @@
-import Home from '@components/Pages/Home'
+import { BrowserRouter as Router } from 'react-router-dom'
+import { RouterConfig } from '@navigation'
 
 const App = () => {
   return (
-    <>
-    <Home />
-    </>
+    <Router>
+      <RouterConfig />
+    </Router>
   )
 }
 

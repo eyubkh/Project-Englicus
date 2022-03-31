@@ -26,7 +26,7 @@ const config = (env, argv) => {
           include: path.resolve(__dirname, './Web/src/')
         },
         {
-          test: /\.(png|jpe?g|gif|glb|gltf|bin)$/i,
+          test: /\.(png|jpe?g|gif|glb|gltf|bin|mdx|svg)$/i,
           loader: 'file-loader',
           options: {
             name: '[name].[ext]',
@@ -41,11 +41,14 @@ const config = (env, argv) => {
         apiAlias: path.resolve(__dirname, './Web/src/'),
         '@tokens': path.resolve(__dirname, './Tokens/build/'),
         '@components': path.resolve(__dirname, './Web/src/Component/'),
-        '@web': path.resolve(__dirname, './Web/src/')
+        '@web': path.resolve(__dirname, './Web/src/'),
+        '@navigation': path.resolve(__dirname, './Web/src/Navigation/'),
+        '@assets': path.resolve(__dirname, './Web/src/Assets/')
       }
     },
     plugins: [new HtmlWebpackPlugin({ template: 'Web/src/index.html' })],
     devServer: {
+      historyApiFallback: true,
       compress: false, // Gzip for compres the site
       port: 3000,
       open: true, // Open browser

@@ -1,8 +1,10 @@
 import styled from 'styled-components'
 
 const Component = styled.div`
-display: flex;
-flex-direction: column;
+  max-width: 450px;
+  & > p {
+    margin-bottom: 2rem;
+  }
 `
 export const TextContainer = ({ children, spacing }) => {
   return (
