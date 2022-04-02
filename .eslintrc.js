@@ -23,9 +23,10 @@ module.exports = {
         map: [
           ['@web', './Web/src'],
           ['@tokens', './Tokens/build'],
-          ['@components', './Web/src/Component'],
-          ['@navigation', './Web/src/Navigation'],
-          ['@assets', './Web/src/Assets']
+          ['@components', './Web/src/component'],
+          ['@navigation', './Web/src/navigation'],
+          ['@assets', './Web/src/assets'],
+          ['@redux', './Web/src/redux/*']
         ],
         extensions: ['.ts', '.js', '.jsx', '.json']
       }

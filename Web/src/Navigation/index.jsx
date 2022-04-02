@@ -9,7 +9,7 @@ import NotFound from '@components/Pages/NotFound'
 export const RouterConfig = () => {
   return (
     <Routes>
-      <Route path={LEARN + IRREGULARVERBS} element={<IrregularVerbs />} />
+      <Route path={`${LEARN}/${IRREGULARVERBS}`} element={<IrregularVerbs />} />
       <Route path={LEARN} element={<Learn />} />
       <Route path={HOME} element={<Home />} />
       <Route path='*' element={<NotFound/>} />

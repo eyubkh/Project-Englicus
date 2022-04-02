@@ -6,9 +6,10 @@
       "alias": {
         "@web": "./Web/src",
         "@tokens": "./Tokens/build",
-        "@components": "./Web/src/Component",
-        "@assets": "./Web/src/Assets",
-        "@navigation": "./Web/src/Navigation"
+        "@components": "./Web/src/component",
+        "@assets": "./Web/src/assets",
+        "@navigation": "./Web/src/navigation",
+        "@redux": "./Web/src/redux"
       }
     }]
   ]
