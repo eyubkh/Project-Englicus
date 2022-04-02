@@ -1,7 +1,7 @@
 {
   "name": "anglicus",
   "version": "0.0.1",
-  "description": "Englicus it is a project for learn english with simples games.",
+  "description": "Englicus it is a project for learn english with simple games.",
   "main": "index.js",
   "scripts": {
     "dev": "webpack serve --mode=development",
