@@ -1,11 +1,15 @@
 import { BrowserRouter as Router } from 'react-router-dom'
+import { Provider } from 'react-redux'
 import { RouterConfig } from '@navigation'
+import store from './Redux/store' 
 
 const App = () => {
   return (
-    <Router>
-      <RouterConfig />
-    </Router>
+    <Provider store={store}>
+      <Router>
+        <RouterConfig />
+      </Router>
+    </Provider>
   )
 }
 

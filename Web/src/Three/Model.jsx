@@ -11,7 +11,7 @@ export default function Model (props) {
   const group = useRef()
   const { nodes, materials } = useGLTF(ModelGLTF)
   useFrame(({ clock }) => {
-    const time = clock.getElapsedTime() * 0.1
+    const time = clock.getElapsedTime() * 0.05
     group.current.rotation.set(time, -time, time)
   })
   return (

@@ -40,10 +40,11 @@ const config = (env, argv) => {
       alias: {
         apiAlias: path.resolve(__dirname, './Web/src/'),
         '@tokens': path.resolve(__dirname, './Tokens/build/'),
-        '@components': path.resolve(__dirname, './Web/src/Component/'),
+        '@components': path.resolve(__dirname, './Web/src/component/'),
         '@web': path.resolve(__dirname, './Web/src/'),
-        '@navigation': path.resolve(__dirname, './Web/src/Navigation/'),
-        '@assets': path.resolve(__dirname, './Web/src/Assets/')
+        '@navigation': path.resolve(__dirname, './Web/src/navigation/'),
+        '@assets': path.resolve(__dirname, './Web/src/assets/'),
+        '@redux': path.resolve(__dirname, './Web/src/redux/')
       }
     },
     plugins: [new HtmlWebpackPlugin({ template: 'Web/src/index.html' })],
