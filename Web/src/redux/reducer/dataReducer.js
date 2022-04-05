@@ -2,24 +2,33 @@ import { DATA } from '../CONSTANS'
 
 const dataInitialState = {
   isLoading: true,
-  data: []
+  api: [],
+  current: 0
 }
 
 const dataReducer = (state = dataInitialState, action) => {
   switch (action.type) {
     case DATA.correct:
+      state.api.splice(state.current, 1)
       state = {
         ...state,
-        data: [...state.data.splice(action.payload, 1)]
+        current: Math.floor(Math.random() * state.api.length)
       }
       return state
     case DATA.initialState: {
       state = {
         isLoading: false,
-        data: action.payload
+        api: action.payload,
+        current: Math.floor(Math.random() * action.payload.length)
       }
       return state
     }
+    case DATA.changeCurrent:
+      state = {
+        ...state,
+        current: Math.floor(Math.random() * state.api.length)
+      }
+      return state
     default:
       return state
   }
