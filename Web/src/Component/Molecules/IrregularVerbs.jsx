@@ -1,5 +1,4 @@
-// import styled from 'styled-components'
-import { Heading } from '@components/Atoms/Text/Heading'
+import { Heading } from '../Atoms/Text'
 
 export const IrregularVerbs = () => {
   return (

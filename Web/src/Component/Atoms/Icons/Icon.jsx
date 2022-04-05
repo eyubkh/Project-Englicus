@@ -3,7 +3,7 @@ import { ColorBrandSecondary, ColorActionError200, ColorNeutralGrey200, ColorAct
 import styled from 'styled-components'
 import Svg from './Svg'
 
-const CircleXMarkConteiner = styled.div`
+const Component = styled.div`
   width: ${(props) => props.size ? `${props.size}` : '50px'};
 `
 
@@ -24,8 +24,8 @@ export const Icon = ({ size, icon }) => {
       fill = ColorNeutralGrey200
   }
   return (
-    <CircleXMarkConteiner size={size}>
+    <Component size={size}>
       { Svg[icon] ? Svg[icon](fill) : 'Chose icon' }
-    </CircleXMarkConteiner>
+    </Component>
   )
 }

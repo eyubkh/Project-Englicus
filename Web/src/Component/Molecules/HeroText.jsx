@@ -1,8 +1,7 @@
 import styled from 'styled-components'
 import { Link } from 'react-router-dom'
-import { DisplayText } from '@components/Atoms/Text/DisplayText'
-import { Button } from '@components/Atoms/Buttons/Button'
-import { TextContainer } from '@components/Atoms/Text/TextContainer'
+import { DisplayText, TextContainer } from '../Atoms/Text'
+import { Button } from '../Atoms/Buttons/Button'
 import { LEARN } from '@navigation/CONSTANS'
 
 const Component = styled.div`

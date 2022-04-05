@@ -1,4 +1,4 @@
-import { Section } from '@components/Organisms/Section'
+import { Section } from '../Organisms/Section'
 
 const Home = () => {
   return (

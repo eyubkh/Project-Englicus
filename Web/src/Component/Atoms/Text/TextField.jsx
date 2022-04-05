@@ -8,7 +8,7 @@ const Component = styled.input`
   width: 230px;
   border-bottom: 4px solid ${ColorBrandSecondary};
   outline: none;
-  padding: 5px 15px;
+  padding: 0px 15px 5px 15px;
   background-color: transparent;
   text-align: center;
   :disabled {
@@ -18,6 +18,6 @@ const Component = styled.input`
   }
 `
 
-export const TextField = ({ isDisabled, ...rest }) => {
-  return <Component disabled={isDisabled}></Component>
+export const TextField = ({ handler, isDisabled, ...rest }) => {
+  return <Component onChange={handler} disabled={isDisabled} { ...rest } ></Component>
 }

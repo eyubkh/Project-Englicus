@@ -1,4 +1,4 @@
-import { SectionLearn } from '@components/Organisms/SectionLearn'
+import { SectionLearn } from '../Organisms/SectionLearn'
 const Learn = () => {
   return (
     <>
