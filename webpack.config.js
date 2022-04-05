@@ -5,7 +5,7 @@ const config = (env, argv) => {
   // const { mode } = argv
   // const isProduction = mode === 'production'
   return {
-    entry: './Web/src/index.js',
+    entry: './Web/src/main.js',
     output: {
       path: path.resolve(__dirname, 'Web/build'),
       filename: 'main.js'
@@ -26,12 +26,19 @@ const config = (env, argv) => {
           include: path.resolve(__dirname, './Web/src/')
         },
         {
-          test: /\.(png|jpe?g|gif|glb|gltf|bin|mdx|svg)$/i,
+          test: /\.(png|jpe?g|gif|glb|gltf|bin|svg)$/i,
           loader: 'file-loader',
           options: {
             name: '[name].[ext]',
             outputPath: 'assets/'
           }
+        },
+        {
+          test: /.mdx?$/,
+          use: [
+            'babel-loader',
+            '@mdx-js/loader'
+          ]
         }
       ]
     },

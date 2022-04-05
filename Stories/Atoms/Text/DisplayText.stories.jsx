@@ -1,4 +1,4 @@
-import { DisplayText as Component } from '@components/Atoms/Text/DisplayText'
+import { DisplayText as Component } from '@components/Atoms/Text'
 
 export default {
   component: Component,

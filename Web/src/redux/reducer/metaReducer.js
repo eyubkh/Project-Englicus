@@ -4,7 +4,11 @@ const metaInitialState = {
   randomNumber: 0,
   isCorrect: false,
   isChecking: false,
-  inputValue: ''
+  textFieldValue: '',
+  progressBar: {
+    ratio: 1,
+    progress: 0
+  }
 }
 
 const metaReducer = (state = metaInitialState, action) => {
@@ -19,9 +23,8 @@ const metaReducer = (state = metaInitialState, action) => {
       const randomNumber = Math.floor(Math.random() * action.payload)
       return { ...state, randomNumber }
     }
-    case META.inputValue: {
-      return { ...state, inputValue: action.payload }
-    }
+    case META.textFieldValue: 
+      return { ...state, textFieldValue: action.payload }
     default:
       return state
   }

@@ -19,7 +19,11 @@ export const isCorrect = (boolean) => ({
   payload: boolean
 })
 
-export const inputValue = (string) => ({
-  type: META.inputValue,
+export const textFieldValue = (string) => ({
+  type: META.textFieldValue,
   payload: string
+})
+
+export const progressBar = () => ({
+  type: META.progressBar
 })

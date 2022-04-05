@@ -1,6 +1,7 @@
 export const DATA = {
   initialState: '@data/initalState',
-  correct: '@data/correct'
+  correct: '@data/correct',
+  changeCurrent: '@data/changeCurrent'
 }
 
 export const META = {
@@ -8,5 +9,11 @@ export const META = {
   isCorrect: '@meta/isCorrect',
   isChecking: '@meta/isChecking',
   message: '@meta/message',
-  inputValue: '@meta/inputValue'
+  textFieldValue: '@meta/textFieldValue',
+  progressBar: '@meta/progressBar'
+}
+
+export const PROGRESS = {
+  barRatio: '@progress/barRatio',
+  barProgress: '@progress/barProgress'
 }

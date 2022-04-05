@@ -1,9 +1,9 @@
 import styled from 'styled-components'
-import { HeroText } from '@components/Molecules/HeroText.jsx'
+import { HeroText } from '../Molecules/HeroText.jsx'
 import { World } from '@web/Three/World'
-import { Header } from '@components/Molecules/Header'
+import { Header } from '../Molecules/Header'
 import { ColorNeutralDark200 } from '@tokens/js/_variables'
-import Svg from '@web/Assets/stars.svg'
+import Svg from '@assets/stars.svg'
 
 const Component = styled.section`
   width: 100vw;

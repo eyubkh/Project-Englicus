@@ -1,11 +1,11 @@
-import { TextStyle as Component } from '@components/Atoms/Text/TextStyle'
+import { TextStyle as Component } from '@components/Atoms/Text'
 
 export default {
   title: 'UI Web/Atoms/Text',
   component: Component,
   argTypes: {
     variant: {
-      options: ['Success', 'Error', 'Bold', 'Default'],
+      options: ['success', 'error', 'light', 'grey', 'default'],
       control: { type: 'radio' }
     }
   }

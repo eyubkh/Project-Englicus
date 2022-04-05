@@ -1,4 +1,4 @@
-import { Panel } from '@components/Atoms/Panel/Panel'
+import { Panel } from '../Atoms/Panel/Panel'
 import { Link } from 'react-router-dom'
 import { IRREGULARVERBS } from '@navigation/CONSTANS'
 import styled from 'styled-components'
@@ -16,8 +16,6 @@ export const PanelSlide = () => {
       <Link to={IRREGULARVERBS}>
         <Panel>Game 1</Panel>
       </Link>
-      <Panel>Game 2</Panel>
-      <Panel>Game 3</Panel>
     </Component>
   )
 }
