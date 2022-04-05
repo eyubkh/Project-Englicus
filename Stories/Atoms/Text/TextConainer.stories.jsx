@@ -1,4 +1,4 @@
-import { TextContainer as Component } from '@components/Atoms/Text/TextContainer'
+import { TextContainer as Component } from '@components/Atoms/Text'
 
 export default {
   title: 'UI Web/Atoms/Text',

@@ -18,7 +18,7 @@ export const Button = (args) => <Component {...args}></Component>
 
 Button.args = {
   children: 'Default',
-  variant: ''
+  variant: 'default'
 }
 
 Button.parameters = {

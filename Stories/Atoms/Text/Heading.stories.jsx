@@ -1,4 +1,4 @@
-import { Heading as Component } from '@components/Atoms/Text/Heading'
+import { Heading as Component } from '@components/Atoms/Text'
 
 export default {
   title: 'UI Web/Atoms/Text/Heading',
