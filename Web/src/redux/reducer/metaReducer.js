@@ -25,6 +25,9 @@ const metaReducer = (state = metaInitialState, action) => {
     }
     case META.textFieldValue: 
       return { ...state, textFieldValue: action.payload }
+    case META.reset:
+      state = metaInitialState
+      return state
     default:
       return state
   }

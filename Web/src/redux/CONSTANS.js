@@ -10,10 +10,12 @@ export const META = {
   isChecking: '@meta/isChecking',
   message: '@meta/message',
   textFieldValue: '@meta/textFieldValue',
-  progressBar: '@meta/progressBar'
+  progressBar: '@meta/progressBar',
+  reset: '@meta/reset'
 }
 
 export const PROGRESS = {
   barRatio: '@progress/barRatio',
-  barProgress: '@progress/barProgress'
+  barProgress: '@progress/barProgress',
+  barReset: '@progress/barResest'
 }

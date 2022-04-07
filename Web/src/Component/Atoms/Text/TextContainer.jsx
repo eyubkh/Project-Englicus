@@ -3,7 +3,7 @@ import styled from 'styled-components'
 const Component = styled.div`
   display: flex;
   flex-direction: column;
-  text-align: ${props => props.center ? 'center' : props.right ? 'right' : 'left'};
+  align-items: ${props => props.center ? 'center' : props.right ? 'right' : 'left'};
   max-width: 450px;
   & > p {
     margin-bottom: 2rem;

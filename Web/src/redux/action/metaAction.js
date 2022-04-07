@@ -27,3 +27,7 @@ export const textFieldValue = (string) => ({
 export const progressBar = () => ({
   type: META.progressBar
 })
+
+export const reset = () => ({
+  type: META.reset
+})

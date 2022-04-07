@@ -25,6 +25,13 @@ const progressReducer = (state = progressInitialState, action) => {
           progress: state.bar.progress + state.bar.ratio
         }
       }
+    case  PROGRESS.barReset:
+      return { 
+        ...state,
+        bar: {
+          ...progressInitialState.bar
+        }
+      }
     default:
       return state
   }

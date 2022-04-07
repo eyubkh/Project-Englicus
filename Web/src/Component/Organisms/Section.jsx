@@ -15,9 +15,9 @@ const Component = styled.section`
   padding: 0 10%;
 
   background-color: ${ColorNeutralDark200};
-  background-position: center;
-  background-size: 70%;
   background-image: url(${Svg});
+  background-position: center;
+  background-size: 80rem;
 `
 
 export const Section = () => {

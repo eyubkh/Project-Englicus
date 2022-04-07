@@ -3,11 +3,13 @@ import { Icon } from '../Atoms/Icons/Icon'
 import { TokenBorderRadiusBar, ColorNeutralGrey100, ColorActionSuccess100 } from '@tokens/js/_variables'
 import { Link } from 'react-router-dom'
 import { LEARN } from '@navigation/CONSTANS'
-import { useSelector } from 'react-redux'
+import { useSelector, useDispatch } from 'react-redux'
+import { reset } from '@redux/action/metaAction'
+import { barReset } from '@redux/action/progressAction'
 
 const Bar = styled.div`
   position: relative;
-  width: 500px;
+  width: 50%;
   height: 10px;
   background: ${ColorNeutralGrey100};
   border-radius: ${TokenBorderRadiusBar};
@@ -22,9 +24,7 @@ const Bar = styled.div`
     height: 100%;
     transition: all .2s;
     background-color: ${ColorActionSuccess100};
-
   }
-
 `
 
 const Component = styled.div`
@@ -37,10 +37,18 @@ const Component = styled.div`
 
 export const ProgressBar = () => {
   const { bar } = useSelector( state => state.progress)
+  const dispatch = useDispatch()
+  const exitHandler = () => {
+    dispatch(reset())
+    dispatch(barReset())
+  }
   console.log(bar)
   return (
     <Component>
-      <Link to={LEARN}>
+      <Link 
+        to={LEARN}
+        onClick={exitHandler}
+      >
         <Icon size='20px' icon='XMark' />
       </Link>
       <Bar progress={bar.progress}  />

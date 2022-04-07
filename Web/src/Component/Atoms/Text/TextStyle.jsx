@@ -1,4 +1,12 @@
-import { TokenFontWeightBold, ColorActionError300, ColorNeutralLight100, ColorNeutralDark300, ColorActionSuccess300, ColorNeutralGrey100 } from '@tokens/js/_variables'
+import { 
+  ColorBrandSecondary, 
+  TokenFontWeightBold, 
+  ColorActionError300, 
+  ColorNeutralLight100, 
+  ColorNeutralDark300, 
+  ColorActionSuccess300, 
+  ColorNeutralGrey100 
+} from '@tokens/js/_variables'
 import styled from 'styled-components'
 
 const Component = styled.span`
@@ -12,6 +20,8 @@ const Component = styled.span`
         return ColorNeutralLight100
       case 'grey':
         return ColorNeutralGrey100
+      case 'purple':
+        return ColorBrandSecondary
       default:
         return ColorNeutralDark300
     }
@@ -19,7 +29,7 @@ const Component = styled.span`
   font-weight: ${props => props.bold ? TokenFontWeightBold : 'none'};
 `
 export const TextStyle = ({ children, ...args }) => {
-  const rules = ['success', 'error', ' light', 'grey',  'default']
+  const rules = ['success', 'error', ' light', 'grey',  'default', 'purple']
   if (!rules.includes(args.variant)) {
     console.warn(`Text Stlye variant given (: ${args.variant} :) there isn't into rules [${rules}]`)
     args.variant = 'default'

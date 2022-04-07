@@ -5,7 +5,7 @@ export default {
   component: Component,
   argTypes: {
     variant: {
-      options: ['success', 'error', 'light', 'grey', 'default'],
+      options: ['success', 'error', 'light', 'grey', 'purple' , 'default'],
       control: { type: 'radio' }
     }
   }

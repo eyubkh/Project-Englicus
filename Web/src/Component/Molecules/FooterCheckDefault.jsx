@@ -31,7 +31,8 @@ export const FooterCheckDefault = ({ state }) => {
       </Button>
       <Button 
         handler={checkHandler}
-        variant='success'  
+        variant='success'
+        className='enter'
       >
         Check
       </Button>
