@@ -42,7 +42,6 @@ export const ProgressBar = () => {
     dispatch(reset())
     dispatch(barReset())
   }
-  console.log(bar)
   return (
     <Component>
       <Link 

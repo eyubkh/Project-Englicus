@@ -5,10 +5,10 @@ const config = (env, argv) => {
   // const { mode } = argv
   // const isProduction = mode === 'production'
   return {
-    entry: './Web/src/main.js',
+    entry: './Web/src/index.js',
     output: {
       path: path.resolve(__dirname, 'Web/build'),
-      filename: 'main.js'
+      filename: 'index.js'
     },
     module: {
       rules: [

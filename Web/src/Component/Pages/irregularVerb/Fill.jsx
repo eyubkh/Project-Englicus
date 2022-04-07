@@ -16,12 +16,13 @@ const Component =  styled.div`
 
 const Fill = () => {
   useEffect(() => {
+    const input = window.document.getElementsByTagName('input')[0]
     window.addEventListener('keydown', (event) => {
+      const button = window.document.getElementsByClassName('enter')[0]
       if(event.key === 'Enter') {
-        const button = window.document.getElementsByClassName('enter')[0]
-        setInterval(() =>{
-          // button.click()
-        }, 100)
+          button.focus()
+          button.click()
+          input.focus()
       }
     })
   }, [])
