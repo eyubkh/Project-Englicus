@@ -17,6 +17,7 @@ const Component =  styled.div`
 const Fill = () => {
   useEffect(() => {
     const input = window.document.getElementsByTagName('input')[0]
+    input.focus()
     window.addEventListener('keydown', (event) => {
       const button = window.document.getElementsByClassName('enter')[0]
       if(event.key === 'Enter') {
@@ -28,7 +29,6 @@ const Fill = () => {
   }, [])
   const dispatch = useDispatch()
   dispatch(initalState())
-
   return (
     <Component>
       <ProgressBar />

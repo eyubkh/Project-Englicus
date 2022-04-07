@@ -15,7 +15,4 @@ export const META = {
 }
 
 export const PROGRESS = {
-  barRatio: '@progress/barRatio',
-  barProgress: '@progress/barProgress',
-  barReset: '@progress/barResest'
 }

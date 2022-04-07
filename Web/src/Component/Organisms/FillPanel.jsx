@@ -21,6 +21,7 @@ export const FillPanel = () => {
   const changeHandler = ({ target }) => {
     dispatch(textFieldValue(target.value))
   }
+    
   return (
     <>
     <Component>

@@ -24,8 +24,9 @@ export const textFieldValue = (string) => ({
   payload: string
 })
 
-export const progressBar = () => ({
-  type: META.progressBar
+export const progressBar = (number) => ({
+  type: META.progressBar,
+  payload: number
 })
 
 export const reset = () => ({
