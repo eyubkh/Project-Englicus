@@ -3,7 +3,8 @@ import { DATA } from '../CONSTANS'
 const dataInitialState = {
   isLoading: true,
   api: [],
-  current: 0
+  current: 0,
+  apiLength: 0
 }
 
 const dataReducer = (state = dataInitialState, action) => {
@@ -19,7 +20,8 @@ const dataReducer = (state = dataInitialState, action) => {
       state = {
         isLoading: false,
         api: action.payload,
-        current: Math.floor(Math.random() * action.payload.length)
+        current: Math.floor(Math.random() * action.payload.length),
+        apiLength: action.payload.length
       }
       return state
     }

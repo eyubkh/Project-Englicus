@@ -10,7 +10,7 @@ export const FooterCheckDefault = ({ state }) => {
   const checkHandler = () => {
     const test = state.meta.textFieldValue === state.current.past
     if(test) {
-      dispatch(progressBar())
+      dispatch(progressBar(100 / state.data.apiLength))
       dispatch(isCorrect(true))
     }
     dispatch(isChecking(true))

@@ -6,10 +6,7 @@ const metaInitialState = {
   isCorrect: false,
   isChecking: false,
   textFieldValue: '',
-  progressBar: {
-    ratio: 1,
-    progress: 0
-  }
+  progressBar: 0
 }
 
 const metaReducer = (state = metaInitialState, action) => {
@@ -27,22 +24,10 @@ const metaReducer = (state = metaInitialState, action) => {
     case META.textFieldValue: 
       return { ...state, textFieldValue: action.payload }
     case META.progressBar:{
-      if(action.payload) {
         return {
           ...state,
-          progressBar: {
-            ratio: 100 / action.payload,
-            progress: 0
-          }
+          progressBar: state.progressBar + action.payload
         }
-      }
-      return {
-        ...state,
-        progressBar: {
-          ...state.progressBar,
-          progress: state.progressBar.progress + state.progressBar.ratio
-        }
-      }
     }
     case META.reset:
       state = metaInitialState

@@ -23,7 +23,8 @@ background-color: ${props => {
 export const FooterCheck = () => {
   const state = useSelector(({ data, meta }) => ({
     current: data.api[data.current],
-    meta
+    meta,
+    data
   }))
 
   return (

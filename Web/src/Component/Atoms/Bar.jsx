@@ -22,7 +22,6 @@ const Component = styled.div`
   }
 `
 
-export const Bar = () => {
-  const { progressBar } = useSelector(state => state.meta)
-  return <Component progress={progressBar.progress}  />
+export const Bar = ({ progress }) => {
+  return <Component progress={progress}  />
 }

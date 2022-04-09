@@ -4,6 +4,4 @@ export default create({
   base: 'light',
   brandTitle: 'Englicus',
   brandImage: 'none'
-  
-
 })

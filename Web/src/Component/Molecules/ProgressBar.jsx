@@ -2,8 +2,8 @@ import styled from 'styled-components'
 import { Icon } from '../Atoms/Icons/Icon'
 import { Link } from 'react-router-dom'
 import { LEARN } from '@navigation/CONSTANS'
-import { useDispatch } from 'react-redux'
-import { reset } from '@redux/action/metaAction'
+import { useDispatch, useSelector } from 'react-redux'
+import { reset, progressBar } from '@redux/action/metaAction'
 import { Bar } from '../Atoms/Bar'
 
 const Component = styled.div`
@@ -14,6 +14,7 @@ const Component = styled.div`
 `
 
 export const ProgressBar = () => {
+  const { progressBar } = useSelector(state => state.meta)
   const dispatch = useDispatch()
   const exitHandler = () => {
     dispatch(reset())
@@ -26,7 +27,7 @@ export const ProgressBar = () => {
       >
         <Icon size='20px' icon='XMark' />
       </Link>
-      <Bar />
+      <Bar progress={progressBar} />
     </Component>
   )
 }
