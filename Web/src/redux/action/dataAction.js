@@ -8,7 +8,7 @@ export const changeCurrent = () => ({
   type: DATA.changeCurrent
 })
 
-export const initalState = () => {
+export const initialState = () => {
   return async dispatch => {
     const payload = await window.fetch('http://localhost:3003/irregularVerb/fill/basic')
       .then(res => res.json())

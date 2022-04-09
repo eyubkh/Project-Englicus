@@ -1,3 +1,4 @@
+import { useEffect } from 'react'
 import styled from 'styled-components'
 import { FillPanelVerb } from '../Molecules/FillPanelVerb'
 import { useSelector, useDispatch } from 'react-redux'
@@ -11,6 +12,18 @@ const Component = styled.section`
   flex-wrap: wrap;
 `
 export const FillPanel = () => {
+  useEffect(() => {
+    const input = window.document.getElementsByTagName('input')[0]
+    input.focus()
+    window.addEventListener('keydown', (event) => {
+      const button = window.document.getElementsByClassName('enter')[0]
+      if(event.key === 'Enter') {
+          button.focus()
+          button.click()
+          input.focus()
+      }
+    })
+  }, [])
   const dispatch = useDispatch()
   const { current, meta } = useSelector(({ data, meta }) => {
     return {
@@ -21,7 +34,6 @@ export const FillPanel = () => {
   const changeHandler = ({ target }) => {
     dispatch(textFieldValue(target.value))
   }
-    
   return (
     <>
     <Component>

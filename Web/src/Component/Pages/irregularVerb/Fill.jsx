@@ -1,10 +1,11 @@
 import { useEffect } from 'react'
 import styled from 'styled-components'
-import { useDispatch } from "react-redux"
-import { initalState } from '@redux/action/dataAction'
+import { useSelector, useDispatch } from "react-redux"
+import { initialState } from '@redux/action/dataAction'
 import { FillPanel } from '../../Organisms/FillPanel'
 import { FooterCheck } from '../../Organisms/FooterCheck'
 import { ProgressBar } from '../../Molecules/ProgressBar'
+import { Loading } from '../Loading'
 
 
 const Component =  styled.div`
@@ -15,27 +16,27 @@ const Component =  styled.div`
 `
 
 const Fill = () => {
-  useEffect(() => {
-    const input = window.document.getElementsByTagName('input')[0]
-    input.focus()
-    window.addEventListener('keydown', (event) => {
-      const button = window.document.getElementsByClassName('enter')[0]
-      if(event.key === 'Enter') {
-          button.focus()
-          button.click()
-          input.focus()
-      }
-    })
-  }, [])
   const dispatch = useDispatch()
-  dispatch(initalState())
+  const state = useSelector(state => state.data.isLoading)
+  useEffect(() => {
+    dispatch(initialState())
+  }, [])
+  
   return (
-    <Component>
-      <ProgressBar />
-      <FillPanel />
-      <FooterCheck />
-    </Component>
+    <>
+      {
+        state 
+        ? <Loading />
+        : <Component>
+            <ProgressBar />
+            <FillPanel />
+            <FooterCheck />
+          </Component>
+      }
+    
+    </>
   )
 }
 
 export default Fill
+
