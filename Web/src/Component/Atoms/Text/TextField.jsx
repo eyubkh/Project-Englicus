@@ -19,5 +19,9 @@ const Component = styled.input`
 `
 
 export const TextField = ({ handler, isDisabled, ...rest }) => {
-  return <Component onChange={handler} disabled={isDisabled} { ...rest } ></Component>
+  return <Component 
+    onChange={handler} 
+    disabled={isDisabled} 
+    { ...rest } 
+    ></Component>
 }

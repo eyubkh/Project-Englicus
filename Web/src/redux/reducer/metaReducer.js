@@ -1,3 +1,4 @@
+import { progressBar } from '@web'
 import { META } from '../CONSTANS'
 
 const metaInitialState = {
@@ -5,10 +6,7 @@ const metaInitialState = {
   isCorrect: false,
   isChecking: false,
   textFieldValue: '',
-  progressBar: {
-    ratio: 1,
-    progress: 0
-  }
+  progressBar: 0
 }
 
 const metaReducer = (state = metaInitialState, action) => {
@@ -25,6 +23,15 @@ const metaReducer = (state = metaInitialState, action) => {
     }
     case META.textFieldValue: 
       return { ...state, textFieldValue: action.payload }
+    case META.progressBar:{
+        return {
+          ...state,
+          progressBar: state.progressBar + action.payload
+        }
+    }
+    case META.reset:
+      state = metaInitialState
+      return state
     default:
       return state
   }

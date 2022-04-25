@@ -1,8 +1,11 @@
-import { SectionLearn } from '../Organisms/SectionLearn'
+import { Header } from '../Molecules/Header'
+import { GameSection } from '../Organisms/GameSection'
+
 const Learn = () => {
   return (
     <>
-    <SectionLearn />
+    <Header />
+    <GameSection />
     </>
   )
 }

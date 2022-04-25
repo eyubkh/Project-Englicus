@@ -2,7 +2,7 @@ import { useDispatch } from "react-redux"
 import { Button } from '../Atoms/Buttons/Button'
 import { isChecking, isCorrect, textFieldValue } from '@redux/action/metaAction'
 import { changeCurrent } from '@redux/action/dataAction'
-import { barProgress } from '@redux/action/progressAction'
+import { progressBar } from '@redux/action/metaAction'
 
 export const FooterCheckDefault = ({ state }) => {
   const dispatch = useDispatch()
@@ -10,7 +10,7 @@ export const FooterCheckDefault = ({ state }) => {
   const checkHandler = () => {
     const test = state.meta.textFieldValue === state.current.past
     if(test) {
-      dispatch(barProgress())
+      dispatch(progressBar(100 / state.data.apiLength))
       dispatch(isCorrect(true))
     }
     dispatch(isChecking(true))
@@ -31,7 +31,8 @@ export const FooterCheckDefault = ({ state }) => {
       </Button>
       <Button 
         handler={checkHandler}
-        variant='success'  
+        variant='success'
+        className='enter'
       >
         Check
       </Button>

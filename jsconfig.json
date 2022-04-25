@@ -2,7 +2,7 @@
   "compilerOptions": {
     "baseUrl": "./",
     "paths": {
-      "@web": ["./Web/src/*"],
+      "@web": ["./Web/src/**"],
       "@tokens": ["./Tokens/build/*"],
       "@components": ["./Web/src/component/*"],
       "@assets": ["./Web/src/Assets/*"],

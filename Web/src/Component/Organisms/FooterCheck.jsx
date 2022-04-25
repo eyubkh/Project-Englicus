@@ -6,7 +6,7 @@ import { FooterCheckStatus } from '../Molecules/FooterCheckStatus'
 
 
 const Component = styled.footer`
-height: 20vh;
+height: 25vh;
 display: flex;
 justify-content: space-around;
 align-items: center;
@@ -23,7 +23,8 @@ background-color: ${props => {
 export const FooterCheck = () => {
   const state = useSelector(({ data, meta }) => ({
     current: data.api[data.current],
-    meta
+    meta,
+    data
   }))
 
   return (

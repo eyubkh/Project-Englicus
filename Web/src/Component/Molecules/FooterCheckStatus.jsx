@@ -23,6 +23,7 @@ export const FooterCheckStatus = ({ state }) => {
       } />
       <Button
         handler={continueHandler}
+        className='enter'
         variant={
           state.meta.isCorrect
           ? 'success'
