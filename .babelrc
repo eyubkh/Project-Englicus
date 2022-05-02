@@ -6,9 +6,10 @@
     ["module-resolver", {
       "alias": {
         "@web": "./Web/src",
-        "@tokens": "./Tokens/build",
-        "@components": "./Web/src/component",
-        "@assets": "./Web/src/assets",
+        "@token:js": "./Token/build/js/_variable.js",
+        "@token:css": "./Token/build/css/_variable.css",
+        "@component": "./Web/src/component",
+        "@asset": "./Web/src/asset",
         "@navigation": "./Web/src/navigation",
         "@redux": "./Web/src/redux"
       }

@@ -46,11 +46,12 @@ const config = (env, argv) => {
       extensions: ['*', '.js', '.jsx', '.css'],
       alias: {
         apiAlias: path.resolve(__dirname, './Web/src/'),
-        '@tokens': path.resolve(__dirname, './Tokens/build/'),
-        '@components': path.resolve(__dirname, './Web/src/component/'),
+        '@token:js': path.resolve(__dirname, './Token/build/js/_variable.js'),
+        '@token:css': path.resolve(__dirname, './Token/build/css/_variable.css'),
+        '@component': path.resolve(__dirname, './Web/src/component/'),
         '@web': path.resolve(__dirname, './Web/src/'),
         '@navigation': path.resolve(__dirname, './Web/src/navigation/'),
-        '@assets': path.resolve(__dirname, './Web/src/assets/'),
+        '@asset': path.resolve(__dirname, './Web/src/asset/'),
         '@redux': path.resolve(__dirname, './Web/src/redux/')
       }
     },

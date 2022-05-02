@@ -22,11 +22,12 @@ module.exports = {
       alias: {
         map: [
           ['@web', './Web/src'],
-          ['@tokens', './Tokens/build'],
-          ['@components', './Web/src/component'],
+          ['@token:js', './Token/build/js/_variable.js'],
+          ['@token:css', './Token/build/css/_variable.css'],
+          ['@component', './Web/src/component'],
           ['@navigation', './Web/src/navigation'],
-          ['@assets', './Web/src/assets'],
-          ['@redux', './Web/src/redux/*']
+          ['@asset', './Web/src/asset'],
+          ['@redux', './Web/src/redux']
         ],
         extensions: ['.ts', '.js', '.jsx', '.json']
       }

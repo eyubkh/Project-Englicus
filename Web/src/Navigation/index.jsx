@@ -1,10 +1,10 @@
 import { Routes, Route } from 'react-router-dom'
 import { HOME, LEARN, IRREGULARVERB } from './CONSTANS'
 // Components
-import Home from '@components/Pages/Home'
-import Learn from '@components/Pages/Learn'
-import Fill from '@components/Pages/irregularVerb/Fill'
-import NotFound from '@components/Pages/NotFound'
+import Home from '@component/page/Home'
+import Learn from '@component/page/Learn'
+import Fill from '@component/page/irregularVerb/Fill'
+import NotFound from '@component/page/NotFound'
 
 export const RouterConfig = () => {
   return (

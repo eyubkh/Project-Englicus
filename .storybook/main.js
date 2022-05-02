@@ -1,7 +1,7 @@
 const custom = require('../webpack.config.js');
 
 module.exports = {
-  "stories": ["../Stories/**/*.stories.mdx", "../Stories/**/*.stories.@(js|jsx|ts|tsx)"],
+  "stories": ["../Storybook/**/*.storie.mdx", "../Storybook/**/*.storie.@(js|jsx|ts|tsx)"],
   "addons": ["@storybook/addon-postcss", "storybook-addon-designs/register", "@storybook/addon-links", "@storybook/addon-essentials", "@storybook/addon-interactions"],
   "framework": "@storybook/react",
   webpackFinal: async config => {
