@@ -1,4 +1,4 @@
-@import '@tokens/css/_variables';
+@import '@token:css';
 
 body,
 *

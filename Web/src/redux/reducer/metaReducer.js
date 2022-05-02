@@ -1,8 +1,6 @@
-import { progressBar } from '@web'
 import { META } from '../CONSTANS'
 
 const metaInitialState = {
-  randomNumber: 0,
   isCorrect: false,
   isChecking: false,
   textFieldValue: '',
@@ -17,17 +15,13 @@ const metaReducer = (state = metaInitialState, action) => {
       return { ...state, message: action.payload }
     case META.isCorrect:
       return { ...state, isCorrect: action.payload }
-    case META.randomNumber: {
-      const randomNumber = Math.floor(Math.random() * action.payload)
-      return { ...state, randomNumber }
-    }
-    case META.textFieldValue: 
+    case META.textFieldValue:
       return { ...state, textFieldValue: action.payload }
     case META.progressBar:{
-        return {
-          ...state,
-          progressBar: state.progressBar + action.payload
-        }
+      return {
+        ...state,
+        progressBar: state.progressBar + action.payload
+      }
     }
     case META.reset:
       state = metaInitialState

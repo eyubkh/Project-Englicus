@@ -1,21 +1,21 @@
 {
-  "source": ["Tokens/data/**/*.json"],
+  "source": ["Token/data/**/*.json"],
   "platforms": {
     "javascript": {
       "transformGroup": "js",
-      "buildPath": "Tokens/build/js/",
+      "buildPath": "Token/build/js/",
       "files": [{
-        "destination": "_variables.js",
+        "destination": "_variable.js",
         "format": "javascript/es6"
       }]
     },
     "css": {
       "transformGroup": "css",
-      "buildPath": "Tokens/build/css/",
+      "buildPath": "Token/build/css/",
       "files": [
         {
           "format": "css/variables",
-          "destination": "_variables.css"
+          "destination": "_variable.css"
         }
       ]
     }
