@@ -1,9 +1,9 @@
-import { Section } from '../organism/Section'
+import { Hero } from '../organism/Hero'
 
 const Home = () => {
   return (
     <>
-      <Section />
+      <Hero />
     </>
   )
 }

@@ -19,7 +19,10 @@ const Component = styled.header`
 export const Header = ({ ...args }) => {
   return (
     <Component {...args}>
-      <Link to={HOME}>
+      <Link 
+        to={HOME}
+        style={{ textDecoration: 'none'}}
+      >
         <Logo />
       </Link>
       <Icon icon='lang' size='40px' />

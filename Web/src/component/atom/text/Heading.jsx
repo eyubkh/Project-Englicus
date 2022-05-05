@@ -1,6 +1,10 @@
 import styled from 'styled-components'
 
 const Template = styled.p`
+  white-space: nowrap ;
+  @media (max-width: 700px) {
+    white-space: normal;
+  }
 `
 export const Heading = ({ children, element, size }) => {
   element = element.toLowerCase()

@@ -2,9 +2,9 @@ import styled from 'styled-components'
 import { Icon } from '../atom/icon/Icon'
 import { Link } from 'react-router-dom'
 import { LEARN } from '@navigation/CONSTANS'
-import { useDispatch, useSelector } from 'react-redux'
-import { reset } from '@redux/action/metaAction'
+import { useSelector, useDispatch } from 'react-redux'
 import { Bar } from '../atom/Bar'
+import { reset } from '@redux/meta/metaSlice'
 
 const Component = styled.div`
   display: flex;

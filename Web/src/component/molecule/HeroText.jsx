@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 import { Link } from 'react-router-dom'
-import { DisplayText, TextContainer } from '../atom/text'
+import { DisplayText, TextContainer, TextStyle } from '../atom/text'
 import { Button } from '../atom/button/Button'
 import { LEARN } from '@navigation/CONSTANS'
 
@@ -19,7 +19,9 @@ export const HeroText = () => {
     <Component>
       <TextContainer >
         <DisplayText size='l'>
-        ¡Improve your english with Englicus gradually!
+          <TextStyle variant='light'>
+            ¡Improve your english with Englicus gradually!
+          </TextStyle>
         </DisplayText>
         <Link to={LEARN}>
           <Button variant="Default">Start</Button>

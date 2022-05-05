@@ -1,11 +1,12 @@
 import { useEffect } from 'react'
 import styled from 'styled-components'
 import { useSelector, useDispatch } from 'react-redux'
-import { initialState } from '@redux/action/dataAction'
+import { fetchBasicVerbs } from '@redux/data/dataSlice'
 import { FillPanel } from '../../organism/FillPanel'
 import { FooterCheck } from '../../organism/FooterCheck'
 import { ProgressBar } from '../../molecule/ProgressBar'
 import { Loading } from '../Loading'
+import { FillDone } from '../../organism/FillDone'
 
 const Component = styled.div`
   height: 100vh;
@@ -16,23 +17,24 @@ const Component = styled.div`
 
 const Fill = () => {
   const dispatch = useDispatch()
-  const state = useSelector(state => state.data.isLoading)
+  const { isLoading, api } = useSelector(state => state.data)
   useEffect(() => {
-    dispatch(initialState())
+    dispatch(fetchBasicVerbs())
   }, [])
 
   return (
     <>
       {
-        state
+        isLoading
           ? <Loading />
-          : <Component>
-              <ProgressBar />
-              <FillPanel />
-              <FooterCheck />
-            </Component>
+          : api.length === 0
+            ? <FillDone />
+            : <Component>
+                <ProgressBar />
+                <FillPanel />
+                <FooterCheck />
+              </Component>
       }
-
     </>
   )
 }
