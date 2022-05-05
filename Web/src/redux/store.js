@@ -1,16 +1,14 @@
-import thunk from 'redux-thunk'
-import { combineReducers, createStore, applyMiddleware } from "redux"
-import data from './reducer/dataReducer'
-import meta from './reducer/metaReducer'
-import progress from './reducer/progressReducer'
+import { configureStore } from '@reduxjs/toolkit'
+import dataReducer from './data/dataSlice'
+import metaReducer from './meta/metaSlice'
 
-const composeEnhancers = (typeof window !== 'undefined' && window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__)
-const reducer = combineReducers({
-  data,
-  meta,
-  progress
+const reducer = {
+  data: dataReducer,
+  meta: metaReducer
+}
+
+const store = configureStore({
+  reducer
 })
-
-const store = createStore(reducer, composeEnhancers(applyMiddleware(thunk)))
 
 export default store
