@@ -2,7 +2,7 @@ import styled from 'styled-components'
 import { TokenFontSizeXxl, TokenFontSizeXl, TokenFontSizeL, TokenFontSizeM, TokenFontSizeS, TokenFontSizeXs } from '@token:js'
 
 const Component = styled.p`
-  color: white;
+  color: dark;
   font-size: ${props => {
     props.size.toLowerCase()
     switch (props.size) {

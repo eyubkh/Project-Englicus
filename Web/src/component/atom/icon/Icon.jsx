@@ -1,13 +1,28 @@
 
-import { ColorBrandSecondary, ColorActionError200, ColorNeutralGrey200, ColorActionSuccess200 } from '@token:js'
+import {
+  ColorBrandSecondary,
+  ColorActionError200,
+  ColorNeutralGrey200,
+  ColorActionSuccess200,
+  ColorNeutralGrey100
+} from '@token:js'
 import styled from 'styled-components'
 import Svg from './Svg'
 
 const Component = styled.div`
-  width: ${(props) => props.size ? `${props.size}` : '50px'};
+  width: ${(props) => {
+    return props.size
+      ? `${props.size}`
+      : '50px'
+  }};
+  cursor: ${(props) => {
+    return props.onClick
+      ? 'pointer'
+      : 'normal'
+  }};
 `
 
-export const Icon = ({ size, icon }) => {
+export const Icon = ({ size, icon, handler }) => {
   let fill = ColorNeutralGrey200
   icon = icon.toLowerCase()
   switch (icon) {
@@ -20,11 +35,14 @@ export const Icon = ({ size, icon }) => {
     case 'circlexmark':
       fill = ColorActionError200
       break
+    case 'rotate':
+      fill = ColorNeutralGrey100
+      break
     default:
       fill = ColorNeutralGrey200
   }
   return (
-    <Component size={size}>
+    <Component onClick={handler} size={size}>
       { Svg[icon] ? Svg[icon](fill) : 'Chose icon' }
     </Component>
   )

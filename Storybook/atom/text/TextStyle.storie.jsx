@@ -7,6 +7,9 @@ export default {
     variant: {
       options: ['success', 'error', 'light', 'grey', 'purple', 'default'],
       control: { type: 'radio' }
+    },
+    bold: {
+      control: { type: 'boolean' }
     }
   }
 }
@@ -15,5 +18,6 @@ export const TextStyle = (args) => <Component {...args} />
 
 TextStyle.args = {
   children: 'example text',
-  variant: 'Bold'
+  variant: 'default',
+  bold: false
 }

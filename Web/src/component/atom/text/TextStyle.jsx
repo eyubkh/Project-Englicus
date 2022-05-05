@@ -29,7 +29,7 @@ const Component = styled.span`
   font-weight: ${props => props.bold ? TokenFontWeightBold : 'none'};
 `
 export const TextStyle = ({ children, ...args }) => {
-  const rules = ['success', 'error', ' light', 'grey', 'default', 'purple']
+  const rules = ['success', 'error', 'light', 'grey', 'default', 'purple']
   if (!rules.includes(args.variant)) {
     console.warn(`Text Stlye variant given (: ${args.variant} :) there isn't into rules [${rules}]`)
     args.variant = 'default'

@@ -1,14 +1,16 @@
 import styled from 'styled-components'
 
 const Component = styled.div`
-  width: 200px;
-  height: 140px;
-  background-color: orangered;
+  width: 240px;
+  height: 120px;
+  background-color: #dddddd;
   display: flex;
   justify-content: center;
   justify-self: center;
   align-items: center;
-  border-radius: 4px;
+  color: dark;
+  margin: auto ;
+  border-radius: 12px;
 `
 
 export const Panel = ({ children }) => {

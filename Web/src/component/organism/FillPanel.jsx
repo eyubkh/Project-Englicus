@@ -1,9 +1,9 @@
-import { useEffect } from 'react'
 import styled from 'styled-components'
 import { FillPanelVerb } from '../molecule/FillPanelVerb'
 import { useSelector, useDispatch } from 'react-redux'
-import { textFieldValue } from '@redux/action/metaAction'
+import { textField } from '@redux/meta/metaSlice'
 import { FillPanelHeading } from '../molecule/FillPanelHeading'
+import { useEffect } from 'react'
 
 const Component = styled.section`
   display: flex;
@@ -14,16 +14,20 @@ const Component = styled.section`
 `
 export const FillPanel = () => {
   useEffect(() => {
-    const input = window.document.getElementsByTagName('input')[0]
-    input.focus()
-    window.addEventListener('keydown', (event) => {
+    const handler = (event) => {
       const button = window.document.getElementsByClassName('enter')[0]
+      input.focus()
       if (event.key === 'Enter') {
         button.focus()
         button.click()
-        input.focus()
       }
-    })
+    }
+    const input = window.document.getElementsByTagName('input')[0]
+    input.focus()
+    window.addEventListener('keydown', handler)
+    return () => {
+      window.removeEventListener('keydown', handler)
+    }
   }, [])
   const dispatch = useDispatch()
   const { current, meta } = useSelector(({ data, meta }) => {
@@ -33,7 +37,7 @@ export const FillPanel = () => {
     }
   })
   const changeHandler = ({ target }) => {
-    dispatch(textFieldValue(target.value))
+    dispatch(textField(target.value))
   }
   return (
     <>

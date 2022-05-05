@@ -1,8 +1,20 @@
+import styled from 'styled-components'
 import { Button } from '../atom/button/Button'
 import { Icon } from '../atom/icon/Icon'
 import { useDispatch } from 'react-redux'
-import { textFieldValue, isCorrect, isChecking } from '@redux/action/metaAction'
-import { correct } from '@redux/action/dataAction'
+import { correct } from '@redux/data/dataSlice'
+import { TextStyle, DisplayText } from '../atom/text'
+import { isCorrect, textField, isChecking } from '@redux/meta/metaSlice'
+
+const Div = styled.div`
+  display: flex ;
+  align-items: center;
+
+  & p {
+    margin-left: 12px;
+  }
+
+`
 
 export const FooterCheckStatus = ({ state }) => {
   const dispatch = useDispatch()
@@ -12,18 +24,29 @@ export const FooterCheckStatus = ({ state }) => {
     }
     dispatch(isChecking(false))
     dispatch(isCorrect(false))
-    dispatch(textFieldValue(''))
+    dispatch(textField(''))
   }
   return (
     <>
-      <Icon
-        size='80px'
-        icon={
-          state.meta.isCorrect
-            ? 'CircleCheck'
-            : 'CircleXMark'
-        }
-      />
+      <Div>
+        <Icon
+          size='80px'
+          icon={
+            state.meta.isCorrect
+              ? 'CircleCheck'
+              : 'CircleXMark'
+          }
+        />
+        <DisplayText size='s'>
+          <TextStyle variant={state.meta.isCorrect ? 'success' : 'error'}>
+            {
+              state.meta.isCorrect
+                ? 'Yeees bro!!'
+                : '... Wrong bro!'
+            }
+          </TextStyle>
+        </DisplayText>
+      </Div>
       <Button
         handler={continueHandler}
         className='enter'

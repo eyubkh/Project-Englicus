@@ -14,7 +14,7 @@ export const FillPanelVerb = ({ field, text }) => {
       {
         field
           ? <TextField
-              value={field.textFieldValue}
+              value={field.textField}
               handler={field.handler}
               isDisabled={field.isChecking}
             />

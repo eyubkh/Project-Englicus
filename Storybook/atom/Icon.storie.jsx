@@ -5,7 +5,14 @@ export default {
   component: Component,
   argTypes: {
     icon: {
-      options: ['CircleCheck', 'XMark', 'Lang', 'CircleXMark', 'Error icon'],
+      options: [
+        'CircleCheck',
+        'XMark',
+        'Lang',
+        'CircleXMark',
+        'Rotate',
+        'Error icon'
+      ],
       control: { type: 'radio' }
     }
   }
