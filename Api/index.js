@@ -1,8 +1,38 @@
-const app = require('./app.js')
-const http = require('http')
+const verbs = require("./verbs.json");
 
-const server = http.createServer(app)
+const allowCors = (fn) => async (req, res) => {
+  res.setHeader("Access-Control-Allow-Credentials", true);
 
-server.listen(process.env.PORT || 3003, () => {
-  console.log('Server up on the port 3003')
-})
+  res.setHeader("Access-Control-Allow-Origin", "*");
+
+  // another common pattern
+
+  // res.setHeader('Access-Control-Allow-Origin', req.headers.origin);
+
+  res.setHeader(
+    "Access-Control-Allow-Methods",
+    "GET,OPTIONS,PATCH,DELETE,POST,PUT"
+  );
+
+  res.setHeader(
+    "Access-Control-Allow-Headers",
+
+    "X-CSRF-Token, X-Requested-With, Accept, Accept-Version, Content-Length, Content-MD5, Content-Type, Date, X-Api-Version"
+  );
+
+  if (req.method === "OPTIONS") {
+    res.status(200).end();
+
+    return;
+  }
+
+  return await fn(req, res);
+};
+
+const handler = (req, res) => {
+  const basic = verbs.filter((verb) => verb.level === "basic");
+
+  res.status(200).send(basic);
+};
+
+module.exports = allowCors(handler);

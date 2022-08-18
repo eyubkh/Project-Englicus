@@ -1,0 +1,155 @@
+[
+  {
+    "infinitive": "find",
+
+    "past": "found",
+
+    "participle": "found",
+
+    "level": "basic",
+
+    "translation": {
+      "es": "encontrar"
+    }
+  },
+
+  {
+    "infinitive": "give",
+
+    "past": "gave",
+
+    "participle": "given",
+
+    "level": "basic",
+
+    "translation": {
+      "es": "dar"
+    }
+  },
+
+  {
+    "infinitive": "get",
+
+    "past": "got",
+
+    "participle": "got",
+
+    "level": "basic",
+
+    "translation": {
+      "es": "conseguir"
+    }
+  },
+
+  {
+    "infinitive": "know",
+
+    "past": "knew",
+
+    "participle": "known",
+
+    "level": "basic",
+
+    "translation": {
+      "es": "saber, conocer"
+    }
+  },
+
+  {
+    "infinitive": "see",
+
+    "past": "saw",
+
+    "participle": "seen",
+
+    "level": "basic",
+
+    "translation": {
+      "es": "ver"
+    }
+  },
+
+  {
+    "infinitive": "come",
+
+    "past": "came",
+
+    "participle": "come",
+
+    "level": "basic",
+
+    "translation": {
+      "es": "venir"
+    }
+  },
+
+  {
+    "infinitive": "take",
+
+    "past": "took",
+
+    "participle": "taken",
+
+    "level": "basic",
+
+    "translation": {
+      "es": "tomar(se)"
+    }
+  },
+
+  {
+    "infinitive": "go",
+
+    "past": "went",
+
+    "participle": "gone",
+
+    "level": "basic",
+
+    "translation": {
+      "es": "irse"
+    }
+  },
+
+  {
+    "infinitive": "say",
+
+    "past": "said",
+
+    "participle": "said",
+
+    "level": "basic",
+
+    "translation": {
+      "es": "decir"
+    }
+  },
+
+  {
+    "infinitive": "make",
+
+    "past": "made",
+
+    "participle": "made",
+
+    "level": "basic",
+
+    "translation": {
+      "es": "hacer"
+    }
+  },
+
+  {
+    "infinitive": "test",
+
+    "past": "test",
+
+    "participle": "test",
+
+    "level": "hard",
+
+    "translation": {
+      "es": "test"
+    }
+  }
+]
